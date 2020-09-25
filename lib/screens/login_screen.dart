@@ -10,15 +10,11 @@ class _LoginScreenState extends BaseViewState<LoginScreen> with BasePage {
   LoginBloc _loginBloc = LoginBloc();
 
   @override
-  LeftAppBarButton leftAppBarButtonType() {
-    return LeftAppBarButton.Empty;
-  }
-
-  @override
   void initBaseState() {
     // this.titleScreen = 'key_title_login';
     this.isSafeAreaRequire = false;
     this.isHiddenNavigationBar = true;
+    this.leftAppBarButton = LeftAppBarButton.Empty;
 
     _loginBloc.errorSubject.listen((error) {
       showErrorMessage(error, scaffoldKey.currentState);

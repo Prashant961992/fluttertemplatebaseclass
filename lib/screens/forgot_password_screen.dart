@@ -10,13 +10,9 @@ class _ForgotPasswordScreenState extends BaseViewState<ForgotPasswordScreen>
   final _emailController = TextEditingController();
 
   @override
-  LeftAppBarButton leftAppBarButtonType() {
-    return LeftAppBarButton.Back;
-  }
-
-  @override
   void initBaseState() {
     this.titleScreen = "key_title_forgot_password";
+    this.leftAppBarButton = LeftAppBarButton.Back;
   }
 
   @override

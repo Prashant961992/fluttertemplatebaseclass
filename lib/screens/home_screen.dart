@@ -22,11 +22,6 @@ class HomeScreenState extends BaseViewState<HomeScreen> with BasePage {
   final HomeBloc _homeBloc = HomeBloc();
 
   @override
-  LeftAppBarButton leftAppBarButtonType() {
-    return LeftAppBarButton.Empty;
-  }
-
-  @override
   void dispose() {
     _homeBloc.dispose();
     super.dispose();
@@ -35,6 +30,18 @@ class HomeScreenState extends BaseViewState<HomeScreen> with BasePage {
   @override
   void initBaseState() {
     this.titleScreen = 'key_title_home';
+    this.leftAppBarButton = LeftAppBarButton.Empty;
+    // this.leftbuilder = Builder(
+    //   builder: (BuildContext context) {
+    //     return CustomAppBarIconButton(
+    //       icon: Icons.plus_one,
+    //       onPressed: () {
+    //         print("Press Button");
+    //       },
+    //     );
+    //   },
+    // );
+
     _load();
   }
 
