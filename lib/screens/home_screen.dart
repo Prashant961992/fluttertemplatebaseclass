@@ -82,7 +82,7 @@ class HomeScreenState extends BaseViewState<HomeScreen> with BasePage {
                             leading: ClipOval(
                               child: CircleAvatar(
                                 radius: 20,
-                                  child: CSNetworkImage(
+                                  child: PPNetworkImage(
                                       imageUrl: _homeBloc.users[index].url)),
                             ),
                             title: Text(_homeBloc.users[index].name),

@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+import 'dart:developer';
 import 'package:dio/dio.dart';
 import 'package:http_parser/http_parser.dart';
 
@@ -31,17 +32,30 @@ class ApiProvider {
   }
 
   Future<dynamic> call(
-      {String url, HTTPMethod method, Map<String, dynamic> request}) async {
+      {String url, HTTPMethod method,dynamic request,
+      dynamic queryParameter}) async {
     var responseJson;
 
     var options = await getOptions(method);
     Dio dio = new Dio(options);
-
+    
+    JsonEncoder encoder = new JsonEncoder.withIndent('  ');
+    String prettyrequest = encoder.convert(request);
+    String queryParameterRequest = encoder.convert(queryParameter);
+    log("Request of $url : Request Data: $prettyrequest");
+    log("Request of $url : Query Parameter: $queryParameterRequest");
+    
     try {
       final response =
-          await dio.request(url, data: request != null ? request : null);
+          await dio.request(url, data: request != null ? request : null,queryParameters: 
+          queryParameter != null ? queryParameter : null);
       print(response.data);
       responseJson = response.data;
+
+      JsonEncoder encoder = new JsonEncoder.withIndent('  ');
+      String prettyResponse = encoder.convert(responseJson);
+      log("Request of $url : $prettyResponse");
+
     } on DioError catch (e) {
       if (e.type == DioErrorType.CONNECT_TIMEOUT) {
         print("DioErrorType Connect Timeout");

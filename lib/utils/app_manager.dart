@@ -1,6 +1,5 @@
 import '../index.dart';
 
-//Application level singleton class
 class AppManager {
   AppManager._(); //private constructor
   static final AppManager instance = AppManager._();

@@ -1,9 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import '../index.dart';
 
-class CSNetworkImage extends StatelessWidget {
+class PPNetworkImage extends StatelessWidget {
   final String imageUrl;
-  const CSNetworkImage({Key key,this.imageUrl}) : super(key: key);
+  const PPNetworkImage({Key key,this.imageUrl}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,9 +18,9 @@ class CSNetworkImage extends StatelessWidget {
   }
 }
 
-class CSNetworkImageProvider extends StatelessWidget {
+class PPNetworkImageProvider extends StatelessWidget {
   final String imageUrl;
-  const CSNetworkImageProvider({Key key,this.imageUrl}) : super(key: key);
+  const PPNetworkImageProvider({Key key,this.imageUrl}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

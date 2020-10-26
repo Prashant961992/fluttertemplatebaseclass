@@ -25,22 +25,6 @@ Color disabledButtonBackground = Color.fromARGB(255, 157, 217, 234);
 Color summaryButtonBackground = Color.fromARGB(255, 253, 152, 39);
 Color cardIcon = Color.fromARGB(255, 101, 191, 218);
 
-const MaterialColor themeColor = const MaterialColor(
-  0xFF3366FF,
-  const <int, Color>{
-    50: const Color(0xFF3366FF),
-    100: const Color(0xFF3366FF),
-    200: const Color(0xFF3366FF),
-    300: const Color(0xFF3366FF),
-    400: const Color(0xFF3366FF),
-    500: const Color(0xFF3366FF),
-    600: const Color(0xFF3366FF),
-    700: const Color(0xFF3366FF),
-    800: const Color(0xFF3366FF),
-    900: const Color(0xFF3366FF),
-  },
-);
-
 Color solitude = Color.fromARGB(255, 215, 221, 233);
 Color oasis = Color.fromARGB(255, 252, 237, 205);
 Color pinkLace = Color.fromARGB(255, 248, 206,223);
@@ -58,3 +42,22 @@ Color strikemaster = Color(0xFFA15D98); //rosyBrown
 Color rose = Color(0xFFec15ee);
 Color purple = Color(0xFF8561f5);
 Color blue = Color(0xFF1eaefc);
+
+const MaterialColor themeColor = const MaterialColor(
+  0xFF3366FF,
+  const <int, Color>{
+    50: const Color(0xFF3366FF),
+    100: const Color(0xFF3366FF),
+    200: const Color(0xFF3366FF),
+    300: const Color(0xFF3366FF),
+    400: const Color(0xFF3366FF),
+    500: const Color(0xFF3366FF),
+    600: const Color(0xFF3366FF),
+    700: const Color(0xFF3366FF),
+    800: const Color(0xFF3366FF),
+    900: const Color(0xFF3366FF),
+  },
+);
+
+
+
